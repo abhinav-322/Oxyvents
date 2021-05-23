@@ -1,5 +1,5 @@
-
-<div class="row mt-5" style="margin-right: 100px;">
+<a href="http://localhost:5000/" class="btn btn-secondary">Logout</a>
+  <div class="row mt-5" style="margin-right: 100px;">
     <div class="col-md-6 m-auto">
       <div class="card card-body">
         <h1 class="text-center mb-3">
@@ -9,6 +9,19 @@
 
         
         <form action="/dashboard" method="POST">
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="Enter Email"
+              
+            />
+          </div>
+
           <div class="form-group">
             <label for="beds">Number of beds available</label>
             <input

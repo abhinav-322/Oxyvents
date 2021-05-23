@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Startup 3.0.5 - Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="i/favicon.png" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:100,200,300,400,600,500,700,800,900|Nunito:100,200,300,400,500,600,700,800,900&amp;subset=latin" rel="stylesheet">
+    <!-- Bootstrap 4.3.1 CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Slick 1.8.1 jQuery plugin CSS (Sliders) -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Fancybox 3 jQuery plugin CSS (Open images and video in popup) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <!-- AOS 2.3.1 jQuery plugin CSS (Animations) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- Startup 3 CSS (Styles for all blocks) -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- jQuery 3.3.1 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+
+
+<style>
+    <style>
+    /* Force scrollbars onto browser window */
+    
+    body {
+        margin-bottom: 200%;
+    }
+    /* Box styles */
+    
+    .myBox {
+        border: none;
+        padding: 5px;
+        font: 24px/36px sans-serif;
+        width: 200px;
+        height: 200px;
+        overflow: scroll;
+    }
+    /* Scrollbar styles */
+    
+     ::-webkit-scrollbar {
+        width: 12px;
+        height: 12px;
+    }
+    
+     ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 10px rgb(11, 198, 255);
+        border-radius: 10px;
+    }
+    
+     ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: rgb(7, 199, 247);
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    }
+    
+     ::-webkit-scrollbar-thumb:hover {
+        background: #05ddec;
+    }
+    /* .header {
+        position: fixed;
+        width: 100%;
+        z-index: 30;
+        height: 60px;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -ms-transition: none;
+        -o-transition: none;
+    }
+    
+    .header.header-scrolled {
+        background: #fff;
+        -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    .header.header-scrolled a {
+        color: #494d55;
+    }
+    
+    .header.header-scrolled .logo {
+        color: #40babd;
+        padding-top: 12px;
+    }
+    
+    .header.header-scrolled .logo .logo-icon-wrapper {
+        background: #40babd;
+        width: 40px;
+        height: 40px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+        -moz-background-clip: padding;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        text-align: center;
+    }
+    
+    .header.header-scrolled .logo .logo-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 0;
+    }
+    
+    .header.header-scrolled .main-nav .nav .nav-link {
+        color: #a2a6af;
+    }
+    
+    .header.header-scrolled .main-nav .nav .nav-link:hover {
+        color: #9499a3;
+    }
+    
+    .header.header-scrolled .main-nav .nav .nav-link.active {
+        color: #494d55;
+        border-bottom: 4px solid #40babd;
+    }
+    
+    .header a {
+        color: #fff;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -ms-transition: none;
+        -o-transition: none;
+    }
+    
+    .header a:hover {
+        text-decoration: none;
+    }
+    
+    .header .logo {
+        margin: 0;
+        display: inline-block;
+        float: left;
+        font-size: 28px;
+        padding-top: 15px;
+    }
+    
+    .header .logo .logo-icon-wrapper {
+        margin-right: 3px;
+        position: relative;
+        display: inline-block;
+        top: -3px;
+    }
+    
+    .header .logo .logo-icon {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .header .logo .highlight {
+        font-weight: 800;
+    }
+    
+    .main-nav {
+        margin-top: 6px;
+    }
+    
+    .main-nav .navbar-toggler {
+        margin-right: 0;
+        margin-top: 0;
+        background: none;
+        position: absolute;
+        padding: 8px 10px;
+        right: 10px;
+        top: 10px;
+        background: rgba(0, 0, 0, 0.6);
+    }
+    
+    .main-nav .navbar-toggler:focus {
+        outline: none;
+    }
+    
+    .main-nav .navbar-toggler .icon-bar {
+        display: block;
+        background-color: #fff;
+        height: 3px;
+        width: 22px;
+        -webkit-border-radius: 1px;
+        -moz-border-radius: 1px;
+        -ms-border-radius: 1px;
+        -o-border-radius: 1px;
+        border-radius: 1px;
+        -moz-background-clip: padding;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+    }
+    
+    .main-nav .navbar-toggler .icon-bar+.icon-bar {
+        margin-top: 4px;
+    }
+    
+    .main-nav .navbar-toggler:hover .icon-bar {
+        background-color: #fff;
+    }
+    
+    .main-nav .nav .nav-item {
+        font-weight: normal;
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    
+    .main-nav .nav .nav-item .nav-link {
+        color: rgba(255, 255, 255, 0.65);
+        font-weight: 700;
+    }
+    
+    .main-nav .nav .nav-item .nav-link.active {
+        position: relative;
+        background: none;
+        color: #fff;
+    }
+    
+    .main-nav .nav .nav-item .nav-link:hover {
+        color: #fff;
+        background: none;
+    }
+    
+    .main-nav .nav .nav-item .nav-link:focus {
+        outline: none;
+        background: none;
+    }
+    
+    .main-nav .nav .nav-item .nav-link:active {
+        outline: none;
+        background: none;
+    }
+    
+    .main-nav .nav .nav-item:last-child {
+        margin-right: 0;
+    }
+    
+    .nav>li>a {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    
+    .nav-link {
+        padding: 15px;
+    } */
+    /* #respond {
+        margin-top: 40px;
+    }
+    
+    #respond input[type='text'],
+    #respond input[type='email'],
+    #respond textarea {
+        margin-bottom: 10px;
+        display: block;
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -o-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -khtml-border-radius: 5px;
+        border-radius: 5px;
+        line-height: 1.4em;
+    } */
+</style>
+</style>
+
+<body>
+    <!-- Navigation Mobile type 2 -->
+
+    <a class="open_menu color-main bg-light radius_full"><i class="fas fa-bars lh-40"></i></a>
+    <div class="navigation_mobile bg-light type2">
+        <a class="close_menu color-main"><i class="fas fa-times"></i></a>
+        <div class="px-40 pt-60 pb-60 text-center inner">
+
+            <div><a href="#" class="f-heading f-22 link color-main mb-20">Home</a></div>
+
+            <div><a href="#" class="f-heading f-22 link color-main mb-20">Popular</a></div>
+
+            <div><a href="#" class="f-heading f-22 link color-main mb-20">Recent</a></div>
+
+            <div><a href="#" class="f-heading f-22 link color-main mb-20">Featured</a></div>
+
+            <div><a href="#" class="f-heading f-22 link color-main mb-20">Designers</a></div>
+
+            <div><a href="#" class="f-heading f-22 link color-main mb-20">Team</a></div>
+            <div><a href="#" class="f-12 link color-main op-7 text-uppercase sp-20 mb-20">Help</a></div>
+            <div><a href="#" class="f-12 link color-main op-7 text-uppercase sp-20 mb-20">F.A.Q.</a></div>
+            <div><a href="#" class="f-12 link color-main op-7 text-uppercase sp-20 mb-20">Support</a></div>
+            <div><a href="#" class="f-12 link color-main op-7 text-uppercase sp-20 mb-20">About Us</a></div>
+            <div><a href="#" class="f-12 link color-main op-7 text-uppercase sp-20 mb-20">Blog</a></div>
+            <div><a href="#" class="f-12 link color-main op-7 text-uppercase sp-20 mb-20">Careers</a></div>
+            <div class="socials mt-60">
+                <img style="height: 70px; width: 140px; margin-top: 20px; margin-left: 20px; z-index: 4;" src="../services/i/logo1.jpg">
+                <a href="#" target="_blank" class="link color-main f-18 mx-10"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank" class="link color-main f-18 mx-10"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank" class="link color-main f-18 mx-10"><i class="fab fa-dribbble"></i></a>
+                <a href="#" target="_blank" class="link color-main f-18 mx-10"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank" class="link color-main f-18 mx-10"><i class="fab fa-behance"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Header 16 -->
+
+    <style>
+        .header_16 {
+            background-image: url(i/header4_16_img.jpg);
+        }
+        
+        @media(-webkit-min-device-pixel-ratio: 1.25),
+        (min-resolution: 120dpi) {
+            .header_16 {
+                background-image: url(i/header4_16_img@2x.jpg);
+            }
+        }
+    </style>
+
+    <header class="pt-145 pb-115 header_16">
+
+        <!-- Header Menu 16 -->
+
+        <nav class="header_menu_16 pt-30 pb-30 mt-15">
+            <div class="container px-xl-0">
+                <div class="row justify-content-center">
+                    <div class="col-xl-10" data-aos-duration="600" data-aos="fade-down" data-aos-delay="1200">
+                        <img style="width: 50px; height: 20px; z-index: 4;" src="service/i/oxyvents.jpg">
+                        <div class="row align-items-baseline">
+                            <div class="col-lg-9 d-flex align-items-center f-18 medium">
+                                <div class="mr-15 logo color-white"> <img style="width: 50px; height: 20px; z-index: 4;" src="service/i/oxyvents.jpg"> </div>
+                                <!-- <a class="scrollto" href="#hero">
+                                    <span class="logo-icon-wrapper"><img class="logo-icon"  src="assets/images/logo-icon.svg" alt="icon"></span>
+                                    <span class="text"><span class="highlight"></span>OXYVENTS</span>
+                                </a>
+                                 <a href="#" class="mx-15 link color-white">Tour</a>
+                                <a href="#" class="mx-15 link color-white">Prices</a>
+                                <a href="#" class="mx-15 link color-white">About</a>
+                                <a href="#" class="mx-15 link color-white">F.A.Q.</a>
+                                <a href="#" class="mx-15 link color-white">Support</a>  -->
+                            </div>
+                            <div class="col-lg-3 d-flex justify-content-end align-items-baseline">
+                                <a href="#" class="btn sm action-1">Covid19 stats</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+
+
+        <!-- <div class="container">
+            <h1 class="logo">
+                <a class="scrollto" href="#hero">
+                    <span class="logo-icon-wrapper"><img class="logo-icon"  src="assets/images/logo-icon.svg" alt="icon"></span>
+                    <span class="text"><span class="highlight"></span>OXYVENTS</span>
+                </a>
+            </h1>
+            //logo
+            <nav class="main-nav navbar-expand-md float-right navbar-inverse" role="navigation">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span> -->
+        <!-- </button> -->
+        <!-- //nav-toggle -->
+
+        <!-- <div id="navbar-collapse" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav" style="height: 100px;">
+                        <li class="nav-item"><a class="active nav-link scrollto" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="#testimonials">FAQ's</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="#team">Team</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="#features">Login</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="#pricing">Sign in</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="#donation">Donation</a></li>
+                    </ul> -->
+        <!-- //nav -->
+        <!-- </div> -->
+        <!--//navabr-collapse-->
+        <!-- </nav> -->
+        <!-- //main-nav -->
+        <!-- </div> -->
+        <!--//container-->
+
+
+        <div class="container px-xl-0 color-white">
+            <div class="row justify-content-center">
+                <div class="col-xl-10">
+                    <div class="row flex-column-reverse flex-md-row align-items-stretch text-center text-md-left">
+                        <div class="col-lg-7 col-md-9 pt-40">
+                            <div class="mb-3 logo d-block d-xl-none color-white logo_mobile">Startup 3</div>
+                            <h1 class="mb-20 big" style="margin-top: 0px;" data-aos-duration="600" data-aos="fade-down" data-aos-delay="0">Donation is another word for Humanity</h1>
+                            <div class="f-22 text-adaptive" data-aos-duration="600" data-aos="fade-down" data-aos-delay="300">
+                                This panedemic and its occurence in a disstrous way has made poor people more poor. Be the god of those who are needy. Step in humanity!!!!!! </div>
+                            <div class="mt-80 row blocks">
+                                <!-- <div class="mt-30 col-sm-6" data-aos-duration="600" data-aos="fade-down" data-aos-delay="600">
+                                    <i class="f-50 fas fa-cogs"></i>
+                                    <div class="mt-30 mb-25 semibold f-20 title">Based on Bootstrap 4</div>
+                                    <div class="text-adaptive">
+                                        HTML layout is based on one of the most common and reliable framework - Bootstrap. </div>
+                                </div>
+                                <div class="mt-30 col-sm-6" data-aos-duration="600" data-aos="fade-down" data-aos-delay="900">
+                                    <i class="f-50 fab fa-html5"></i>
+                                    <div class="mt-30 mb-25 semibold f-20 title">HTML5 &amp; CSS3</div>
+                                    <div class="text-adaptive">
+                                        We used only time-tested technologies for the best results. </div>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-3 d-flex align-items-center" data-aos-duration="600" data-aos="fade-down" data-aos-delay="1200">
+                            <img srcset="i/header1_16_bg@2x.jpg 2x" src="i/header1_16_bg.jpg" class="ml-30 mh-full img" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Feature 37 -->
+
+    <section class="feature_37 bg-light pt-100 pb-65">
+        <div class="container px-xl-0">
+            <div class="row justify-content-between">
+                <div class="col-xl-1"></div>
+                <div class="col-lg-5 col-md-6 mb-50 mb-md-0" data-aos-duration="600" data-aos="fade-down" data-aos-delay="0">
+                    <h2 class="mb-20 small">
+                        Why you should donate stuff for poor people?
+                    </h2>
+                    <div class="mb-25 f-18 medium color-heading op-7 text-adaptive">
+                        No matter how many improvements we have made to general living standards, they have not reached all parts of the world. What we usually take for granted, someone else in some part of the world is struggling really hard for and mainly in these days.
+                    </div>
+
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-5" data-aos-duration="600" data-aos="fade-down" data-aos-delay="300">
+                    <div class="mb-55 d-flex align-items-center advantage">
+                        <!-- <i class="fas fa-sync-alt color-gray f-26 lh-24 w-30 mr-20"></i> -->
+                        <div class="f-14 semibold text-uppercase sp-20 title"> Just Because You Can</div>
+                    </div>
+                    <div class="mb-55 d-flex align-items-center advantage">
+                        <!-- <i class="far fa-file color-gray f-26 lh-24 w-30 mr-20"></i> -->
+                        <div class="f-14 semibold text-uppercase sp-20 title">It is beneficial for needy people</div>
+                    </div>
+                    <div class="mb-55 d-flex align-items-center advantage">
+                        <!-- <i class="far fa-clone color-gray f-26 lh-24 w-30 mr-20"></i> -->
+                        <div class="f-14 semibold text-uppercase sp-20 title">Poverty can be reduced</div>
+                    </div>
+                    <div class="mb-55 d-flex align-items-center advantage">
+                        <!-- <i class="fas fa-desktop color-gray f-26 lh-24 w-30 mr-20"></i> -->
+                        <div class="f-14 semibold text-uppercase sp-20 title">Provides a chance to create a better world</div>
+                    </div>
+                    <div class="mb-55 d-flex align-items-center advantage">
+                        <!-- <i class="fas fa-columns color-gray f-26 lh-24 w-30 mr-20"></i> -->
+                        <div class="f-14 semibold text-uppercase sp-20 title">Improve Society Diversity and Inclusion</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Content 6 -->
+
+    <style>
+        .content_6 {
+            background-image: url(i/content1_6_bg.jpg);
+        }
+        
+        @media(-webkit-min-device-pixel-ratio: 1.25),
+        (min-resolution: 120dpi) {
+            .content_6 {
+                background-image: url(i/content1_6_bg@2x.jpg);
+            }
+        }
+    </style>
+
+    <!-- <section class="content_6 pt-125 pb-105">
+        <div class="container px-xl-0 text-center color-white">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10" data-aos-duration="600" data-aos="fade-down" data-aos-delay="0">
+                    <h2>The Third Sneak-Peek of Startup Framework</h2>
+                </div>
+                <div class="mt-35 col-xl-7 col-lg-8 col-md-10 f-22 text-adaptive" data-aos-duration="600" data-aos="fade-down" data-aos-delay="300">
+                    We have created a new product that will help designers, developers and companies create websites for their <br />startups quickly and easily. </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Ecommerce 30 -->
+
+    <style>
+        #ecommerce_30_block_1 .bg {
+            background-image: url(i/ecommerce1_30_bg_1.jpg);
+        }
+        
+        @media(-webkit-min-device-pixel-ratio: 1.25),
+        (min-resolution: 120dpi) {
+            #ecommerce_30_block_1 .bg {
+                background-image: url(i/ecommerce1_30_bg_1@2x.jpg);
+            }
+        }
+        
+        #ecommerce_30_block_2 .bg {
+            background-image: url(i/ecommerce1_30_bg_2.jpg);
+        }
+        
+        @media(-webkit-min-device-pixel-ratio: 1.25),
+        (min-resolution: 120dpi) {
+            #ecommerce_30_block_2 .bg {
+                background-image: url(i/ecommerce1_30_bg_2@2x.jpg);
+            }
+        }
+    </style>
+
+    <!-- <section class="ecommerce_30 bg-light pt-85 pb-85 text-center text-md-left">
+        <div class="container px-xl-0">
+            <div class="row">
+                <div class="mt-15 mb-15 col-xl-8 col-md-6 d-md-flex align-items-stretch product big" id="ecommerce_30_block_1" data-aos-duration="600" data-aos="fade-down" data-aos-delay="0">
+                    <div class="relative holder radius10">
+                        <div class="absolute bg"></div>
+                        <div class="px-50 pt-50 pb-60 relative d-md-flex flex-column justify-content-between align-items-start h-full inner">
+                            <div class="top">
+                                <div class="mb-2 f-14 color-heading semibold text-uppercase sp-20 subtitle">Inspiration for mankind</div>
+                                <h2 class="mb-60 small">A little contribution can’t change the world but it can change someone’s world.</h2>
+                            </div>
+                            <a href="#" class="btn action-2">Try Right Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-15 mb-15 col-xl-4 col-md-6 d-md-flex align-items-stretch product small" id="ecommerce_30_block_2" data-aos-duration="600" data-aos="fade-down" data-aos-delay="300">
+                    <div class="relative holder radius10">
+                        <div class="absolute bg"></div>
+                        <div class="px-50 pt-50 pb-60 relative d-md-flex flex-column justify-content-between align-items-start h-full inner">
+                            <div class="top">
+                                <div class="mb-2 f-14 color-white semibold text-uppercase sp-20 subtitle">ON TOP</div>
+                                <h2 class="mb-60 small color-white">Akshay Kumar</h2>
+                                <p class="mb-60 small color-white" style="font-size: large;">He is the biggest example of humanity. Being the most active person in donating stuff to poor people and saving lives of many, he has now set an example for us....... </p>
+                            </div>
+                            <a href="#" class="btn action-white"><span class="color-main">Read more</span></a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+        </div>
+    </section> -->
+
+    <!-- Pricing Table 4 -->
+
+    <section class="pricing_table_4 pt-105 pb-100 color-white">
+        <div class="container px-xl-0">
+            <div class="row justify-content-center text-center">
+                <div class="col-xl-8 col-lg-10" data-aos-duration="600" data-aos="fade-down" data-aos-delay="0">
+                    <h2 class="small">Donate whatever you can</h2>
+                </div>
+                <div class="col-xl-6 col-lg-8 col-md-10" data-aos-duration="600" data-aos="fade-down" data-aos-delay="300">
+                    <div class="mt-25 mb-55 f-22 text-adaptive">
+                        Donating money either to the goverment or to the poor people & things(chlothes, grocery,etc.).
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="mb-70 mb-lg-0 col-lg-4 col-md-7 col-sm-8">
+                    <div class="mx-auto mw-370 px-70 pt-60 pb-55 radius10 block">
+                        <div class="f-22 title" data-aos-duration="600" data-aos="fade-down" data-aos-delay="0">Money to the poor</div>
+                        <div class="mt-30 mb-40 f-58 d-flex align-items-start price" data-aos-duration="600" data-aos="fade-down" data-aos-delay="0">
+                            <b></b>
+                            <div class="mt-1 ml-5 f-16"></div>
+                        </div>
+                        <ul class="px-0" data-aos-duration="600" data-aos="fade-down" data-aos-delay="0">
+                            <li class="mb-10">This site is available at every corner of the world. So each and every person can donate their money to save innocent poor people</li>
+                            <li class="mb-10">2 years old girl Rashmi belonging to a poor family had covid19. This site was succesful to get to the hospital and arrange money for her. </li>
+                            <li class="mb-10">Sunkho, 25 year old was having lots of responsibility of his house & poverty lying on his head was saved because of the donation.</li>
+                            <li class="mb-10">Asmi being a housewife, got the required medicines she wanted. </li>
+                            <!-- <li class="mb-10">Remote access</li>
+                            <li class="mb-10">Custom domain</li>
+                            <li class="mb-10">24 hours support</li>
+                            <li class="mb-10">Admin tools</li>
+                            <li class="mb-10">Collaboration tools</li>
+                            <li class="mb-10">User management</li> -->
+                        </ul>
+                        <div data-aos-duration="600" data-aos="fade-down" data-aos-delay="0">
+                            <a href="#" class="mt-15 btn lg border-transparent-white">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="mb-70 mb-lg-0 col-lg-4 col-md-7 col-sm-8">
+                    <div class="mx-auto mw-370 px-70 pt-60 pb-55 radius10 block">
+                        <div class="f-22 title" data-aos-duration="600" data-aos="fade-down" data-aos-delay="150">Things</div>
+                        <div class="mt-30 mb-40 f-58 d-flex align-items-start price" data-aos-duration="600" data-aos="fade-down" data-aos-delay="150">
+                            <b></b>
+                            <div class="mt-1 ml-5 f-16"></div>
+                        </div>
+                        <ul class="px-0" data-aos-duration="600" data-aos="fade-down" data-aos-delay="150">
+                            <li class="mb-10">A family living in rajasthan ate nothing in the whole 7 days. And got their eatables with help of donation of some great people.</li>
+                            <li class="mb-10">In the cold shivering winter, a girl slept on the road everyday as she had no extra chlothes to fold on, was helped because of donation.</li>
+                            <li class="mb-10"></li>
+                            <li class="mb-10">Client billing</li>
+                            <li class="mb-10">Remote access</li>
+                            <li class="mb-10">Custom domain</li>
+                            <li class="mb-10">24 hours support</li>
+                            <li class="mb-10">Admin tools</li>
+                            <li class="mb-10">Collaboration tools</li>
+                            <li class="mb-10">User management</li> -->
+                <!-- </ul> -->
+                <!--<div data-aos-duration="600" data-aos="fade-down" data-aos-delay="150">
+                            <a href="#" class="mt-15 btn lg action-3">Get Started</a>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="col-lg-4 col-md-7 col-sm-8">
+                    <div class="mx-auto mw-370 px-70 pt-60 pb-55 radius10 block">
+                        <div class="f-22 title" data-aos-duration="600" data-aos="fade-down" data-aos-delay="300">Money to the goverment</div>
+                        <div class="mt-30 mb-40 f-58 d-flex align-items-start price" data-aos-duration="600" data-aos="fade-down" data-aos-delay="300">
+                            <b></b>
+                            <div class="mt-1 ml-5 f-16"></div>
+                        </div>
+                        <ul class="px-0" data-aos-duration="600" data-aos="fade-down" data-aos-delay="300">
+                            <li class="mb-10">Goverment is trying to help the nation in all possible way.</li>
+                            <li class="mb-10">This money totally goes to the organisations (via goverment) who are right now working hard to launch as many vaccines as possible for the population of 135 crore. </li>
+                            <!-- <li class="mb-10">Social integrations</li>
+                            <li class="mb-10">Client billing</li>
+                            <li class="mb-10">Remote access</li>
+                            <li class="mb-10">Custom domain</li>
+                            <li class="mb-10">24 hours support</li>
+                            <li class="mb-10">Admin tools</li>
+                            <li class="mb-10">Collaboration tools</li>
+                            <li class="mb-10">User management</li> -->
+                        </ul>
+                        <div data-aos-duration="600" data-aos="fade-down" data-aos-delay="300">
+                            <a href="#" class="mt-15 btn lg border-transparent-white">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="ecommerce_30 bg-light pt-85 pb-85 text-center text-md-left">
+        <div class="container px-xl-0">
+            <div class="row">
+                <div class="mt-15 mb-15 col-xl-8 col-md-6 d-md-flex align-items-stretch product big" id="ecommerce_30_block_1" data-aos-duration="600" data-aos="fade-down" data-aos-delay="0">
+                    <div class="relative holder radius10">
+                        <div class="absolute bg"></div>
+                        <div class="px-50 pt-50 pb-60 relative d-md-flex flex-column justify-content-between align-items-start h-full inner">
+                            <div class="top">
+                                <div class="mb-2 f-14 color-heading semibold text-uppercase sp-20 subtitle">Inspiration for mankind</div>
+                                <h2 class="mb-60 small">A little contribution can’t change the world but it can change someone’s world.</h2>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-15 mb-15 col-xl-4 col-md-6 d-md-flex align-items-stretch product small" id="ecommerce_30_block_2" data-aos-duration="600" data-aos="fade-down" data-aos-delay="300">
+                    <div class="relative holder radius10">
+                        <div class="absolute bg"></div>
+                        <div class="px-50 pt-50 pb-60 relative d-md-flex flex-column justify-content-between align-items-start h-full inner">
+                            <div class="top">
+                                <div class="mb-2 f-14 color-white semibold text-uppercase sp-20 subtitle">ON TOP</div>
+                                <h2 class="mb-60 small color-white">Akshay Kumar</h2>
+                                <p class="mb-60 small color-white" style="font-size: large;">He is the biggest example of humanity. Being the most active person in donating stuff to poor people and saving lives of many, he has now set an example for us....... </p>
+                            </div>
+                            <a href="https://www.news18.com/news/movies/akshay-kumar-pledges-to-donate-rs-25-cr-for-war-against-coronavirus-modi-calls-it-great-gesture-2555133.html" class="btn action-white"><span class="color-main">Read more</span></a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    <section class="content_6 pt-125 pb-105">
+        <div class="container px-xl-0 text-center color-white">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10" data-aos-duration="600" data-aos="fade-down" data-aos-delay="0">
+                    <h2>HELP US FIGHT THE COVID19 SECOND WAVE AND SAVE LIVES</h2>
+                </div>
+                <div class="mt-35 col-xl-7 col-lg-8 col-md-10 f-22 text-adaptive" data-aos-duration="600" data-aos="fade-down" data-aos-delay="300">
+                    CARE is reducing the burden on the health system with make-shift dedicated COVID health centres, PPE kits for frontline workers, and raising awareness about COVID - 19 appropriate behaviour.. </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer 3 -->
+
+    <!-- <footer class="footer_3 bg-light pt-100 pb-100 text-center text-lg-left">
+        <div class="container px-xl-0">
+            <div class="row">
+                <div class="col-xl-1"></div>
+                <div class="mb-50 mb-lg-0 col-lg-4" data-aos-duration="600" data-aos="fade-down" data-aos-delay="0">
+                    <div class="row">
+                        <div class="col-12">
+                            <a href="#" class="logo link color-main">Startup 3</a>
+                        </div>
+                        <div class="mt-30 mb-35 col-xl-7 col-lg-9 color-heading text-adaptive description">
+                            Be sure to take a look at our <a href="#" class="link color-heading">Terms of Use</a> and
+                            <a href="#" class="link color-heading">Privacy Policy</a>
+                        </div>
+                        <div class="col-12 socials">
+                            <a href="#" class="f-18 link color-main mr-30"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="f-18 link color-main mr-30"><i class="fab fa-facebook-square"></i></a>
+                            <a href="#" class="f-18 link color-main mr-30"><i class="fab fa-google-plus-g"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-8">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 col-6 mb-50 mb-md-0" data-aos-duration="600" data-aos="fade-down" data-aos-delay="150">
+                            <div class="mb-35 f-18 semibold title">Product</div>
+                            <div class="mb-10"><a href="#" class="link color-main">Features</a></div>
+                            <div class="mb-10"><a href="#" class="link color-main">Pricing</a></div>
+                            <div class="mb-10"><a href="#" class="link color-main">Tour</a></div>
+                        </div>
+                        <div class="col-md-3 col-6 mb-50 mb-md-0" data-aos-duration="600" data-aos="fade-down" data-aos-delay="300">
+                            <div class="mb-35 f-18 semibold title">Work</div>
+                            <div class="mb-10"><a href="#" class="link color-main">Our Portfolio</a></div>
+                            <div class="mb-10"><a href="#" class="link color-main">Lastest Work</a></div>
+                            <div class="mb-10"><a href="#" class="link color-main">Brands</a></div>
+                        </div>
+                        <div class="col-md-3 col-6" data-aos-duration="600" data-aos="fade-down" data-aos-delay="450">
+                            <div class="mb-35 f-18 semibold title">Stuff</div>
+                            <div class="mb-10"><a href="#" class="link color-main">Privacy</a></div>
+                            <div class="mb-10"><a href="#" class="link color-main">Support</a></div>
+                            <div class="mb-10"><a href="#" class="link color-main">Help Desk</a></div>
+                            <div class="mb-10"><a href="#" class="link color-main">FAQ</a></div>
+                        </div>
+                        <div class="col-md-3 col-6" data-aos-duration="600" data-aos="fade-down" data-aos-delay="600">
+                            <div class="mb-35 f-18 semibold title">About</div>
+                            <div class="mb-10"><a href="#" class="link color-main">About Us</a></div>
+                            <div class="mb-10"><a href="#" class="link color-main">Blog</a></div>
+                            <div class="mb-10"><a href="#" class="link color-main">Team</a></div>
+                            <div class="mb-10"><a href="#" class="link color-main">Career</a></div>
+                            <div class="mb-10"><a href="#" class="link color-main">Contact</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer> -->
+    <!-- forms alerts -->
+    <div class="alert alert-success alert-dismissible alert-form-success" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> Thanks for your message!
+    </div>
+    <div class="alert alert-warning alert-dismissible alert-form-check-fields" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> Please, fill in required fields.
+    </div>
+    <div class="alert alert-danger alert-dismissible alert-form-error" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> An error occurred while sending data :(
+    </div>
+    <!-- popup with video -->
+    <div class="overlay"></div>
+
+    <div class="video_popup">
+        <a class="close">
+            <img srcset="i/close_white@2x.png 2x" src="i/close_white.png" alt="" />
+        </a>
+        <div class="d-flex align-items-center justify-content-center w-full h-full iframe_container"></div>
+    </div>
+
+
+    <!-- <script>
+        $(window).bind('load', function() {
+            if ($(window).scrollTop() > 0) {
+                $('#header').addClass('header-scrolled');
+            } else {
+                $('#header').removeClass('header-scrolled');
+            }
+        });
+
+        $(document).ready(function() {
+
+
+            /* ======= Fixed header when scrolled ======= */
+
+            $(window).bind('scroll resize', function() {
+                if ($(window).scrollTop() > 0) {
+                    $('#header').addClass('header-scrolled');
+                } else {
+                    $('#header').removeClass('header-scrolled');
+                }
+            });
+
+            /* ======= Scrollspy ======= */
+            $('body').scrollspy({
+                target: '#header',
+                offset: 100
+            });
+
+            /* ======= ScrollTo ======= */
+            $('a.scrollto').on('click', function(e) {
+
+                //store hash
+                var target = this.hash;
+
+                e.preventDefault();
+
+                $('body').scrollTo(target, 800, {
+                    offset: -50,
+                    'axis': 'y'
+                });
+                //Collapse mobile menu after clicking
+                if ($('.navbar-collapse').hasClass('show')) {
+                    $('.navbar-collapse').removeClass('show');
+                }
+
+            });
+
+
+        });
+    </script> -->
+
+
+    <!-- Bootstrap 4.3.1 JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <!-- Fancybox 3 jQuery plugin JS (Open images and video in popup) -->
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <!-- Google maps JS API -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDP6Ex5S03nvKZJZSvGXsEAi3X_tFkua4U"></script>
+    <!-- Slick 1.8.1 jQuery plugin JS (Sliders) -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- AOS 2.3.1 jQuery plugin JS (Animations) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Maskedinput jQuery plugin JS (Masks for input fields) -->
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <!-- Startup 3 JS (Custom js for all blocks) -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

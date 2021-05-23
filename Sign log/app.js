@@ -12,6 +12,7 @@ require('./config/passport')(passport);
 
 //Db config
 const db = require('./config/keys').MongoURI;
+const router = require('./routes/index');
 
 
 //connect to mongo
@@ -24,8 +25,10 @@ mongoose.connect(db, {useNewUrlParser : true , useUnifiedTopology: true, useCrea
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
 
+
 //Bodyparser
-app.use(express.urlencoded({ extended: false}));
+app.use(express.urlencoded({ extended: true}));
+
 
 // Express Session
 app.use(session({
